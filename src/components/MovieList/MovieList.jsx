@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const MovieList = ({ movies }) => {
   const location = useLocation();
@@ -8,9 +8,9 @@ const MovieList = ({ movies }) => {
     <ul className="list-group list-group-flush">
       {movies.map(({ id, title }) => (
         <li key={id} className="list-group-item">
-          <Link to={`/movies/${id}`} state={{ from: location }}>
+          <NavLink to={`/movies/${id}`} state={{ from: location }}>
             {title}
-          </Link>
+          </NavLink>
         </li>
       ))}
     </ul>
@@ -18,3 +18,16 @@ const MovieList = ({ movies }) => {
 };
 
 export default MovieList;
+
+//   return (
+//     <ul className="list-group list-group-flush">
+//       {movies.map(({ id, title }) => (
+//         <li key={id} className="list-group-item">
+//           <NavLink to={`/movies/${id}`} state={{ from: location }}>
+//             {title}
+//           </NavLink>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// };

@@ -23,7 +23,11 @@ const Cast = () => {
   return (
     <>
       {isLoading && <div>...Loading</div>}
-      <ul class="list-group">
+      {!isLoading && casts.length === 0 && (
+        <div> We don't have any results for this movie ...</div>
+      )}
+
+      <ul className="list-group">
         {casts?.map(cast => {
           return (
             <li

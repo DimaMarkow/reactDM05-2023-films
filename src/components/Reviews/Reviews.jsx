@@ -24,10 +24,17 @@ const Reviews = () => {
   return (
     <>
       {isLoading && <div>...Loading</div>}
-      <ul class="list-group">
+      {!isLoading && reviews.length === 0 && (
+        <div> We don't have any results for this movie ...</div>
+      )}
+
+      <ul className="list-group">
         {reviews?.map(review => {
           return (
-            <li className="list-group-item d-flex justify-content-between align-items-start">
+            <li
+              key={review.id}
+              className="list-group-item d-flex justify-content-between align-items-start"
+            >
               <div className="ms-2 me-auto">
                 <div className="fw-bold">{review.author}</div>
                 {review.content}

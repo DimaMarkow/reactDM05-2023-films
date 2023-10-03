@@ -34,7 +34,7 @@ const MovieDetails = () => {
       <div className="container" style={{ padding: 5 }}>
         {isLoading && <div>...Loading</div>}
 
-        <div className="card mb-3" style={{ maxWidth: 600 }}>
+        <div className="card mb-3" style={{ maxWidth: '80%' }}>
           <div className="row g-0">
             <div className="col-md-4">
               <img src={string} className="img-fluid rounded-start" alt="..." />
