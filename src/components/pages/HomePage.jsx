@@ -23,7 +23,7 @@ const HomePage = () => {
   return (
     <div className="container">
       {isLoading && <div>...Loading</div>}
-      <h3>HomePage</h3>
+      <h4>Trending today</h4>
       {/* <MovieList movies={movies} /> */}
       {movies.length > 0 && <MovieList movies={movies} />}
     </div>

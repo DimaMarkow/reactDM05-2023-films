@@ -1,10 +1,17 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const MovieList = ({ movies }) => {
+  const location = useLocation();
+
   return (
-    <ul>
+    <ul className="list-group list-group-flush">
       {movies.map(({ id, title }) => (
-        <li key={id}>{title}</li>
+        <li key={id} className="list-group-item">
+          <Link to={`/movies/${id}`} state={{ from: location }}>
+            {title}
+          </Link>
+        </li>
       ))}
     </ul>
   );
