@@ -18,16 +18,3 @@ const MovieList = ({ movies }) => {
 };
 
 export default MovieList;
-
-//   return (
-//     <ul className="list-group list-group-flush">
-//       {movies.map(({ id, title }) => (
-//         <li key={id} className="list-group-item">
-//           <NavLink to={`/movies/${id}`} state={{ from: location }}>
-//             {title}
-//           </NavLink>
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// };
